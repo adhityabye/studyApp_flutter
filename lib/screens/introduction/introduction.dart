@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:study_app_flutter/routes/app_routes.dart';
+import 'package:study_app_flutter/screens/home/home_screen.dart';
 import 'package:study_app_flutter/widgets/app_circle_button.dart';
 import 'package:get/get.dart';
+
+import '../../configs/themes/app_colors.dart';
 
 class AppIntroductionScreen extends StatelessWidget {
   const AppIntroductionScreen({super.key});
@@ -11,20 +15,31 @@ class AppIntroductionScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        decoration: BoxDecoration(gradient: mainGradient(context)),
         alignment: Alignment.center,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Get.width * 0.2),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.star, size: 65, color: Colors.amber),
+              const Icon(
+                Icons.star,
+                size: 65,
+              ),
               SizedBox(height: 40),
               const Text(
-                  "this is a study app. You can use it as you want. If you understand how its works, you would able to scale it"),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: onSurfaceTextColor,
+                    fontWeight: FontWeight.w400,
+                  ),
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"),
               SizedBox(height: 40),
               AppCircleButton(
-                  onTap: () => null,
-                  child: Icon(Icons.arrow_forward, size: 35)),
+                child: Icon(Icons.arrow_forward, size: 40),
+                onTap: () => print("yes"),
+              ),
             ],
           ),
         ),
