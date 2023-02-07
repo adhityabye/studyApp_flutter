@@ -36,9 +36,11 @@ class AppIntroductionScreen extends StatelessWidget {
                   ),
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"),
               SizedBox(height: 40),
-              AppCircleButton(
-                child: Icon(Icons.arrow_forward, size: 40),
-                onTap: () => print("yes"),
+              InkWell(
+                onTap: () => null,
+                child: Container(
+                  child: Icon(Icons.arrow_forward_ios_rounded, size: 40),
+                ),
               ),
             ],
           ),
