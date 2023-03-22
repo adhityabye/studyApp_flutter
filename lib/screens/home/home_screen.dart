@@ -16,8 +16,8 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return ClipRRect(
             child: SizedBox(
-              height: 200,
-              width: 200,
+              height: double.maxFinite,
+              width: double.maxFinite,
               child: FadeInImage(
                 image: NetworkImage(
                     _questionPaperController.allPaperImages[index]),
