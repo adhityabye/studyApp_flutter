@@ -5,6 +5,7 @@ import 'package:study_app_flutter/routes/app_routes.dart';
 import 'package:study_app_flutter/screens/home/home_screen.dart';
 import 'package:study_app_flutter/widgets/app_circle_button.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../configs/themes/app_colors.dart';
 
